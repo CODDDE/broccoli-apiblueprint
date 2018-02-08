@@ -11,8 +11,14 @@
     "apiblueprint",
     "aglio"
   ],
+  "honepage": "https://github.com/CODDDE/broccoli-apiblueprint",
+  "bugs": "https://github.com/CODDDE/broccoli-apiblueprint/issues",
   "author": "Fabio Sanvido",
-  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CODDDE/broccoli-apiblueprint.git"
+  },
+  "license": "MIT",
   "devDependencies": {
     "aglio": "^2.3.0",
     "broccoli": "^1.1.4",
