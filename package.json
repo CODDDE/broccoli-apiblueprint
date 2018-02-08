@@ -1,0 +1,23 @@
+{
+  "name": "broccoli-apiblueprint",
+  "version": "0.0.1",
+  "description": "Broccoli plugin to compile Apiblueprint documents through the Aglio package",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha tests/index-test.js"
+  },
+  "keywords": [
+    "broccoli-plugin",
+    "apiblueprint",
+    "aglio"
+  ],
+  "author": "Fabio Sanvido",
+  "license": "ISC",
+  "devDependencies": {
+    "aglio": "^2.3.0",
+    "broccoli": "^1.1.4",
+    "broccoli-plugin": "^1.3.0",
+    "mocha": "^5.0.0",
+    "rsvp": "^4.8.1"
+  }
+}
