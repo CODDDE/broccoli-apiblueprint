@@ -5,7 +5,7 @@ const path = require('path');
 const { existsSync } = require('fs');
 const mkdirp = require('mkdirp');
 
-const logWarning = require('./lib/log-warning');
+const { logWarning, logError } = require('./lib/log-warning');
 
 
 ApiCompiler.prototype = Object.create(Plugin.prototype);
@@ -34,10 +34,14 @@ function ApiCompiler(inputNodes, options) {
 
 var handleCompileResult = function(resolve, reject){
   return function (err, warnings) {
+    const warns = Array.from(warnings || []);
+    if(warns.length){
+      warns.forEach(logWarning(warnings.input));
+    }
     if (err){
+      logError(err);
       reject(err, warnings);
     } else {
-      warnings.forEach(logWarning(warnings.input))
       resolve();
     }
   };
