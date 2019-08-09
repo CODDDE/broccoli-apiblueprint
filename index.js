@@ -52,9 +52,6 @@ function parseOptions(optionsObject){
 }
 
 ApiCompiler.prototype.build = function() {
-  console.log('####################################');
-  console.log('################## LOCAL VERSION');
-  console.log('####################################');
   if(Array.isArray(this.inputPaths) && this.inputPaths.length > 1) {
     return reject({
       message: 'Broccoli-apiblueprint MUST be pointed to a single folder'
